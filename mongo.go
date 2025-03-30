@@ -11,8 +11,8 @@ import (
 
 // Config holds the configuration settings for connecting to MongoDB.
 type Config struct {
-	URI      string `yaml:"uri"`
-	Database string `yaml:"database"`
+	URI      string `confy:"uri"      yaml:"uri"      json:"uri"      toml:"uri"      env:"MONGO_URI"`
+	Database string `confy:"database" yaml:"database" json:"database" toml:"database" env:"MONGO_DATABASE"`
 }
 
 // Client is an alias to mongo.Database.
